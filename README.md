@@ -6,6 +6,10 @@ The idea comes from the final project of my regression class (STAT 462), where o
 When completing the presentation as well as the report, we felt it was so annoying and boring for translating the model to latex code by hand because we did so much typing, copying, and pasting. 
 Therefore, I developed this simple r package afterward to do all the work by one line of simple code. 
 
+## Features
+### Linear Model: 
+* Treat the normal, categorical predictors and interaction differently. 
+
 ## Installing
 If you're using r studio, follow the code below to install this package. 
 ```
@@ -18,7 +22,7 @@ library(rmodel2tex)
 ## Current Supported Model
 Name | Description | Primary Function | Code in this package
 -----|-------------|------------------|------------------
-Linear Models | Linear regression | lm( ) | lm2tex(model, type, round_num)
+Linear Model | Linear regression | lm( ) | lm2tex(model, type, round_num)
 
 ## Simple Documentation and Examples
 #### For linear model: 
