@@ -2,8 +2,8 @@ Package: rmodel2tex
 Type: Package
 Title: Convert Various R Model to Latex Syntax
 Version: 0.1.1
-Authors@R: person("Zheng", "Zhang", email="zxz147@psu.edu")
-    role = c("aut", "cre")
+Authors@R: person("Zheng", "Zhang", email="zxz147@psu.edu", role = c("aut", "cre"))
+Maintainer: Zheng Zhang <zxz147@psu.edu>
 Description: Converting various r model to latex syntax. 
     Current supported model: lm
 License: 
