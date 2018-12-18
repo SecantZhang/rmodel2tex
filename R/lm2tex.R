@@ -15,8 +15,8 @@ lm2tex <- function(model, type, round_num) {
     if (model$call[[1]] == "lm") {
 
         # Initialize the two strings for latex syntax of both population and fitted model.
-        pop_str <- paste(toString(model$call$formula[[2]]), "=", sep=" ")
-        fit_str <- paste("\\hat{", toString(model$call$formula[[2]]), "} = ", sep="")
+        pop_str <- paste(deparse(model$call$formula[[2]]), "=", sep=" ")
+        fit_str <- paste("\\hat{", deparse(model$call$formula[[2]]), "} =", sep="")
 
         # Check if the model have categorical predictor.
         if (length(model$xlevels) == 0) {
@@ -37,6 +37,9 @@ lm2tex <- function(model, type, round_num) {
         for (i in 1:length(model$coefficients)) {
             iter_num <- 1
             temp_coef <- model$coefficients[i]
+
+            # Replacing the underline with "-" because latex doesn't like it.
+            names(temp_coef) <- gsub("_", "-", names(temp_coef))
             coef_sign <- ifelse(temp_coef >= 0, "+", "-")
 
             # Main loop which treat the intercept differently.
