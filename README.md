@@ -6,10 +6,16 @@ The idea comes from the final project of my regression class (STAT 462), where o
 When completing the presentation as well as the report, we felt it was so annoying and boring for translating the model to latex code by hand because we did so much typing, copying, and pasting. 
 Therefore, I developed this simple r package afterward to do all the work by one line of simple code. 
 
+<<<<<<< HEAD
 ## Current Development Objective
 
 * Create the function for converting the logistic regression and robust regression to latex syntax. 
 * Add some simple examples for demo purposes. 
+=======
+## Features
+### Linear Model: 
+* Treat the normal, categorical predictors and interaction differently. 
+>>>>>>> 56acbef6edbddfa35c5378bcda12a9d2e2b75d1e
 
 ## Installing
 If you're using r studio, follow the code below to install this package. 
@@ -23,8 +29,12 @@ library(rmodel2tex)
 ## Current Supported Model
 Name | Description | Primary Function | Code in this package
 -----|-------------|------------------|------------------
+<<<<<<< HEAD
 Linear Models | Linear regression | lm( ) | lm2tex(model, type, round_num)
 Logistic Regression Model | Logistic Regression | glm( ) | glm2tex(glm_model, glm_type, glm_form, glm_round_num)
+=======
+Linear Model | Linear regression | lm( ) | lm2tex(model, type, round_num)
+>>>>>>> 56acbef6edbddfa35c5378bcda12a9d2e2b75d1e
 
 ## Simple Documentation and Examples
 #### For linear model: 
